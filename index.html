@@ -179,29 +179,32 @@
 		<div class="showcase__heading">
 			<h2>Недвижимость</h2>
 		</div>
-		<div class="showcase__slider">
-			<div class="showcase__slides ">
-				<div class="image-slider__slide swiper-slide">
-					<div class="image-slider__image">
-						<img src="./img/1.jpeg" alt="1">
-					</div>
-					<!--				<div class="image-slider__image">-->
-					<!--					<img src="./img/2.jpeg" alt="2">-->
-					<!--				</div>-->
-					<!--				<div class="image-slider__image">-->
-					<!--					<img src="./img/3.jpeg" alt="3">-->
-					<!--				</div>-->
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="./img/1.jpeg" alt="1">
+				</div>
+				<div class="swiper-slide">
+					<img src="./img/2.jpeg" alt="2">
+				</div>
+				<div class="swiper-slide">
+					<img src="./img/3.jpeg" alt="3">
 				</div>
 			</div>
-			<button class="showcase__slider-btn next ">></button>
-			<button class="showcase__slider-btn prev "><</button>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
 		</div>
 		<button class="showAll">Показать все</button>
 
 	</section>
 
 	<!--Contacts Section -------------------------->
-	<section class="contacts" id="contacts">
+	<section class="contacts swiper-slide" id="contacts">
 		<div class="heading">
 			<h2>Контактная информация</h2>
 		</div>
@@ -270,6 +273,7 @@
 		</div>
 	</section>
 
+
 	<!--Footer ----------------------------------->
 	<footer class="footer"></footer>
 
@@ -293,14 +297,17 @@
 					</form>
 				</div>
 
-				<button class="popup__btn" type="submit">Перезвоните мне</button>
+				<button class="popup__btn" type="submit">Перезвоните мне
+				</button>
 			</div>
 		</div>
 	</div>
 
 	<a href="#popup" class="popup__link">Связаться</a>
 </div>
-<script src="script.js"></script>
+
+
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
