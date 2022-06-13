@@ -1,0 +1,143 @@
+/* Google Fonts - Poppins -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* Import ---------------------------------- */
+@import "vars";
+@import "header";
+@import "about";
+@import "services";
+@import "showcase";
+@import "contacts";
+@import "footer";
+@import "popup";
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body, button, input, textarea {
+	font-family: 'Poppins', sans-serif;
+	font-size: $normal-font;
+	font-weight: $font-regular;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background: #1b1b1b;
+}
+
+
+a, p {
+	font-size: $normal-font;
+	color: $lightgray;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	transition: $transition-03;
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+button {
+	width: 250px;
+	height: 50px;
+	border-radius: 25px;
+	box-shadow: 0 0 5px 0 $lightgray;
+	background: transparent;
+	color: $gray;
+	transition: $transition-03;
+	outline: none;
+
+	&:hover {
+		transform: scale(1.01);
+		box-shadow: 0 0 8px 0 $yellow;
+		color: $yellow;
+	}
+}
+
+input, textarea {
+	background: transparent;
+	color: $lightgray;
+	transition: $transition-03;
+	outline: none;
+	border-bottom: 1px solid $gray;
+	padding: .5rem 0;
+
+	&:focus {
+		border-bottom: 1px solid $yellow;
+	}
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $white
+}
+
+h2 {
+	font-size: $h2-font;
+}
+
+h4 {
+	font-size: $h4-font;
+}
+
+i {
+	color: $yellow;
+}
+
+li {
+	list-style: none;
+}
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 5rem;
+
+	@media screen and (max-width: 1200px) {
+		padding: 0 4rem;
+	}
+
+	@media screen and (max-width: 992px) {
+		padding: 0 3rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 0 1.5rem;
+	}
+
+	@media screen and (max-width: 576px) {
+		padding: 0 1rem;
+	}
+}
+
+.heading {
+	margin-bottom: 3rem;
+
+	@media screen and (max-width: 992px) {
+		margin-top: 90px;
+		margin-bottom: 1rem;
+	}
+}
+

@@ -1,0 +1,35 @@
+/* Colors      ---------- */
+$black: #000;
+$darkgray: #373737;
+$gray: #6c6c6c;
+$lightgray: #e0e0e0;
+$yellow: #faf10c;
+$white: #f5f5f5;
+
+/* Font-Size ------------ */
+$big-font: 5.5rem;
+$h1-font: 3.6rem;
+$h2-font: 3rem;
+$h3-font: 2.4rem;
+$h4-font: 2rem;
+$normal-font: 1.8rem;
+$sm-font: 1.4rem;
+$xsm-font: 1.2rem;
+
+/* Font-Weight ------ */
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 600;
+
+/* Transition      -----------*/
+$transition-03: .3s ease all;
+$transition-05: .5s ease-in all;
+
+/* Z-Index ---------- */
+$z-fixed: 100;
+$z-overlay: 10;
+
+/* Font-Size for Small Screen ---------- */
+@media screen and (max-width: 992px) {
+
+}

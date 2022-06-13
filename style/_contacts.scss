@@ -1,0 +1,121 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+
+	.block {
+		margin-bottom: 3rem;
+		column-gap: 3rem;
+
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	.heading {
+		margin-top: 90px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-basis: 40%;
+
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__form, &__method {
+		box-shadow: 0 0 8px 0 $lightgray;
+		transition: $transition-03;
+		border-radius: 10px;
+
+		&:hover {
+			transform: scale(1.01);
+			box-shadow: 0 0 8px 0 $yellow;
+		}
+	}
+
+	&__method {
+		padding: 1rem;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 2rem;
+			padding: 1rem 2rem;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: .5rem;
+			}
+		}
+	}
+
+	&__links {
+		a {
+			&:not(:last-child) {
+				margin-right: .4rem;
+			}
+		}
+	}
+
+	&__form {
+		flex-basis: 60%;
+
+		@media screen and (max-width: 992px) {
+			width: 100%;
+		}
+
+		&:active {
+			box-shadow: 0 0 8px 0 $yellow;
+		}
+
+
+		form {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 1.5rem;
+
+			h4 {
+				margin-bottom: .5rem;
+			}
+
+			input {
+				margin-bottom: .5rem;
+			}
+
+			textarea {
+				resize: none;
+				margin-bottom: 2rem;
+				min-height: 45%;
+				height: 250px;
+			}
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 600px;
+
+		@media screen and (max-width: 1200px) {
+			height: 500px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			filter: invert(90%);
+		}
+	}
+}

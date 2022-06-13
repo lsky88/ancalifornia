@@ -1,0 +1,120 @@
+/* Header --------------------------------- */
+.header {
+	width: 100%;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-fixed;
+
+	&__container {
+		height: 9rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5rem;
+
+		@media screen and (max-width: 1200px) {
+			padding: 0 4rem;
+		}
+
+		@media screen and (max-width: 992px) {
+			padding: 0 3rem;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding: 0 1.5rem;
+		}
+
+		@media screen and (max-width: 576px) {
+			padding: 0 1rem;
+		}
+	}
+
+	&__logo {
+		width: 110px;
+		transition: $transition-03;
+
+		@media screen and (max-width: 768px) {
+			width: 100px;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+
+/* Navigation -------------------------------- */
+.nav {
+	transition: $transition-05;
+	@media screen and (max-width: 992px) {
+		width: 35%;
+		position: absolute;
+		right: 0;
+		top: 9rem;
+		height: calc(100vh - 9rem);
+		background: rgba($black, .8);
+		transform: translateX(100%)
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		column-gap: 2rem;
+
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			position: absolute;
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		@media screen and (max-width: 992px) {
+			display: flex;
+			align-items: center;
+			height: 50px;
+			border-bottom: 1px solid $yellow;
+			opacity: 0;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__burger {
+		cursor: pointer;
+		display: none;
+		color: $lightgray;
+		font-size: $big-font;
+		transition: $transition-03;
+
+		@media screen and (max-width: 992px) {
+			display: block;
+		}
+
+	}
+
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+/* Animation -------------------------------- */
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
